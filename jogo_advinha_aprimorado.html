@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+    
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");   
+    }
+
+    function mostra(frase) {
+    
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroPensado = Math.round(Math.random() * 10);
+    var quantidadeTentativas = 3;
+    contador = 0;
+
+    while(contador < quantidadeTentativas && chute != numeroPensado) {
+        var chute = parseInt(prompt("Digite seu chute: "));
+        if (chute == numeroPensado) {
+            mostra("Você advinhou! O número pensado foi " + numeroPensado + " !");
+        } else {
+            if(contador < quantidadeTentativas && chute != numeroPensado) {
+                alert("Você errou! Tente novamente");
+                contador ++;
+            }
+            if (contador == quantidadeTentativas && chute != numeroPensado) {
+                alert("Fim das tentativas. O número pensado foi " + numeroPensado + "!");
+            } 
+                
+        }
+    }    
+
+</script>
